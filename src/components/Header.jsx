@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav className='flex items-center justify-between bg-white w-full h-[60px] py-6 px-6 sm:px-16'>
+    <header className='w-full fixed'>
+      <nav className='flex items-center justify-between bg-white w-full h-[60px] py-6 px-6 sm:px-16'>
       <a href="" className='flex items-center'>
         {/* <img src={logo} alt="logo" className='w-[120px]' /> */}
         <span className='font-bold font-poppins text-purple'>E-library</span>
@@ -18,6 +19,7 @@ const Header = () => {
             </li>
         </ul>
     </nav>
+    </header>
   )
 }
 
