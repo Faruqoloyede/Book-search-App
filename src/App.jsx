@@ -5,6 +5,13 @@ import About from './pages/About';
 import BookDetails from './pages/BookDetails';
 
 const App = () => {
+  const getbook = async ()=>{
+    const url = "https://openlibrary.org/search.json?title=hello";
+    const response = await fetch(url);
+    const resJson = await response.json();
+    console.log(resJson);
+  }
+  getbook();
   return (
     <div>
       <Routes>
