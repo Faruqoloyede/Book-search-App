@@ -3,7 +3,7 @@ import BookList from '../components/BookList'
 
 const BookPage = () => {
   return (
-    <div>
+    <div className='py-10'>
       <BookList/>
     </div>
   )
