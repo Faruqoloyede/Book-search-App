@@ -7,6 +7,7 @@ import {
 import Mainlayout from './layout/Mainlayout';
 import Home from "./pages/Home";
 import BookPage from './pages/BookPage';
+import BookDetails from "./pages/BookDetails";
 
 
 const App = () => {
@@ -15,6 +16,11 @@ const App = () => {
           <Route path='/' element={<Mainlayout />}>
             <Route index element={<Home />} />
             <Route path='/books' element={<BookPage />} />
+            <Route
+          path='/books/:id'
+          element={<BookDetails />}
+          
+        />
           </Route>
         )
       );

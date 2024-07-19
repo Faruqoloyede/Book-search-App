@@ -8,15 +8,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.hero {
-    background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)), url('./assets/bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* background-attachment: fixed; */
-}
-
-.book_items {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-}
