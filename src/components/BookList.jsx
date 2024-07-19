@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SingleBook from "./SingleBook";
+import Spinner from "./Spinner";
+import Search from "./Search";
 
-const BookList = ({ isHome = false }) => {
-  const [books, setBooks] = useState(null); // Initialize as null
-  const [loading, setLoading] = useState(true);
+const BookList = ({ isHome = false, search }) => {
+  const [books, setBooks] = useState([]); //initialized to empty array
+  const [loading, setLoading] = useState(true);//initialized the loading to true 
   
   useEffect(() => {
     const getBooks = async () => {
@@ -29,7 +31,7 @@ const BookList = ({ isHome = false }) => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>; // Handle loading state
+    return <Spinner />; // Handle loading state
   }
   return (
     <div className="bg-blue-50 px-4 py-6 flex flex-col items-center">
@@ -43,9 +45,9 @@ const BookList = ({ isHome = false }) => {
             <SingleBook key={index} book={book} />
         ))}
       </div>
-      <Link to={""} className=" h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm">
-              View more
-        </Link>
+      {isHome ? <Link to={'/books'} className=" h-[36px] bg-black hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-center text-sm">
+              View All books
+        </Link> : ""}
     </div>
   );
 };
