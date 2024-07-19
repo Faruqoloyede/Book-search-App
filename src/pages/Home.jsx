@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <BookList />
+      <BookList isHome={true} />
     </div>
   )
 }
